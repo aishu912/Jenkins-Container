@@ -1,7 +1,9 @@
 pipeline{
   agent{
-    label 'built-in'
-    customWorkspace '/root/dockerCont/'
+    label{
+         label 'built-in'
+         customWorkspace '/root/dockerCont/' 
+    }
   }
   stages{
     stage('master-cont'){
