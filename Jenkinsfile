@@ -7,6 +7,8 @@ pipeline{
   }
   stages{
     stage('cleaning up existing containers'){
+       steps{
+       }
       /* steps{
             // Stop all running containers
             sh "docker stop \$(docker ps -q)"
@@ -28,4 +30,5 @@ pipeline{
        }
     }*/
   }
+}
 }
