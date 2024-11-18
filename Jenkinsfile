@@ -7,7 +7,7 @@ pipeline{
   }
   stages{
     stage('cleaning up existing containers'){
-       steps{
+       /*steps{
             // Stop all running containers
             sh "docker stop \$(docker ps -q)"
             // Remove all containers (including stopped ones)
@@ -26,6 +26,6 @@ pipeline{
          sh "docker cp index.html 2025Q2:/usr/local/apache2/htdocs"
          sh "docker exec 2025Q2 chmod 755 /usr/local/apache2/htdocs/index.html"
        }
-    }
+    }*/
   }
 }
