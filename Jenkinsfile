@@ -17,7 +17,7 @@ pipeline{
     stage('create a container'){
        steps{
          sh "docker run -d -p 8000:80 --name 2025Q3 httpd"
-         
+         git branch: '2025Q3', changelog: false, poll: false, url:'https://github.com/aishu912/Jenkins-Container.git'
        }
     }
     
