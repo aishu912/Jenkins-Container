@@ -9,9 +9,9 @@ pipeline{
     stage('cleaning up existing containers'){
        steps{
             // Stop all running containers
-            sh "docker stop $(docker ps -q)"
+            sh "docker stop \$(docker ps -q)"
             // Remove all containers (including stopped ones)
-            sh "docker rm $(docker ps -a -q)"
+            sh "docker rm \$(docker ps -a -q)"
        }
     }
     stage('create a container'){
