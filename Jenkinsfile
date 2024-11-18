@@ -6,8 +6,7 @@ pipeline{
   stages{
     stage('master-cont'){
        steps{
-         sh "docker run -itdp 80:80 --name contMaster httpd"
-         
+         sh "docker run -d -p 80:80 --name contMaster httpd"
        }
     }
   }
