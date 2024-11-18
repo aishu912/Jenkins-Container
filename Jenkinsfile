@@ -8,8 +8,7 @@ pipeline{
   stages{
     stage('master-cont'){
        steps{
-         sh "docker stop $(docker ps -a -q)"
-         sh "docker remove $(docker ps -a -q)"
+         
          sh "docker run -d -p 80:80 --name contMaster httpd"
          sh "docker cp index.html contMaster:/usr/local/apache2/htdocs"
          sh "docker chmod 755 contMaster:/usr/local/apache2/htdocs"
