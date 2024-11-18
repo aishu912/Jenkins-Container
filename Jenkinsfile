@@ -16,15 +16,15 @@ pipeline{
     }
     stage('create a container'){
        steps{
-         sh "docker run -d -p 80:80 --name contMaster httpd"
+         sh "docker run -d -p 100:80 --name 2025Q3 httpd"
          
        }
     }
     
     stage('deploy'){
        steps{
-         sh "docker cp index.html contMaster:/usr/local/apache2/htdocs"
-         sh "docker exec contMaster chmod 755 /usr/local/apache2/htdocs/index.html"
+         sh "docker cp index.html 2025Q3:/usr/local/apache2/htdocs"
+         sh "docker exec 2025Q3 chmod 755 /usr/local/apache2/htdocs/index.html"
        }
     }
   }
