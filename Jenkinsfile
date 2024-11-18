@@ -16,7 +16,7 @@ pipeline{
     }
     stage('create a container'){
        steps{
-         sh "docker run -d -p 100:80 --name 2025Q3 httpd"
+         sh "docker run -d -p 8000:80 --name 2025Q3 httpd"
          
        }
     }
